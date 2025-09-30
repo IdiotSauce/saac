@@ -1,0 +1,294 @@
+CSS/Style modifiers
+font-size:60px; or font-size:150%; - Change font size
+color: = self explanatory
+border:2px solid blue - adds border
+padding: 30px; - padding between element and border
+margin: space outside a border
+background-color: self explanatory
+<hr> horizontal line break
+<pre> maintains formatting
+font-family: change the font
+<h1>-<h6> - headers
+title = hover text
+<a title="evil site" href="https://www.google.com">poo link</a> link
+<img src="image.jpg" width="200" height="200"> image
+<br> line break in text
+background-image: adds a background image to something
+background-repeat: no-repeat - change if a small iamge repeats or not
+text-align - change alignment of text
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  - makes something cover a whole area
+  add on size: 100 100% it'll stretch it to the size of your screen
+id = creates bookmark you can refer to, which links can refer to both on the current page and other pages
+color in HTML can be defined using p much anything
+
+    <b> - Bold text
+    <strong> - Important text
+    <i> - Italic text
+    <em> - Emphasized text
+    <mark> - Marked text
+    <small> - Smaller text
+    <del> - strikethrough text
+    <ins> - underlined text
+    <sub> - Subscript text
+    <sup> - Superscript text
+    <blockquote> - makes it stick out fo a quote
+    <q> just adds quotation makrs
+    <abbr> title = blah balh - abbreviations
+    <address> just italizies for contact information
+    <cite> - also just italizies, why do these all exist
+    <bdo> dir="rtl" - changes text direction
+    <!-- This is a comment -->
+
+
+the style elements are CSS and they can be done for an indiviaul element, a whole section i.e.
+<style>
+body {background-color: powderblue;}
+</style>
+or can be defined in an external document
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+and then in the document it would look like This
+body {
+  background-color: powderblue;
+}
+h1 {
+  color: blue;
+}
+
+links: target: 
+
+    _self - Default. Opens the document in the same window/tab as it was clicked
+    _blank - Opens the document in a new window or tab
+    _parent - Opens the document in the parent frame
+    _top - Opens the document in the full body of the window
+    link to image:
+ <a href="default.asp">
+<img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;">
+</a> 
+ <a href="mailto:someone@example.com">Send email</a> - make it open an email program
+ 
+ javascript button:
+  <button onclick="document.location='default.asp'">HTML Tutorial</button> 
+
+  links using CSS instead, you can change the color like so
+  <style>
+a:link {
+  color: green;
+}
+
+a:visited {
+  color: pink;
+  background-color: transparent;
+}
+
+a:hover {
+  color: red;
+  background-color: transparent;
+}
+etc.
+doing this, you can make a button using CSS instead of JS 
+<style>
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: red;
+}
+</style>
+
+you can define image width and height in style which can stop a style sheet from changing it. size can also be done in percentage
+you can put images in a paragraph and use float:left or float:right to make it appear on the left of right side of it.
+make an image with clickable areas:
+ <img src="workplace.jpg" alt="Workplace" usemap="#workmap">
+
+<map name="workmap">
+  <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+  <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+  <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm">
+</map> 
+
+    rect - defines a rectangular region
+    circle - defines a circular region
+    poly - defines a polygonal region
+    default - defines the entire region
+javascript can make thingies happen when you click something:
+ <map name="workmap">
+  <area shape="circle" coords="337,300,44" href="coffee.htm" onclick="myFunction()">
+</map>
+
+<script>
+function myFunction() {
+  alert("You clicked the coffee cup!");
+}
+</script> 
+
+
+to define different images for different screensizes:
+ <picture>
+  <source media="(min-width: 650px)" srcset="img_food.jpg">
+  <source media="(min-width: 465px)" srcset="img_car.jpg">
+  <img src="img_girl.jpg">
+</picture> 
+
+
+<head>
+  <title>My Page Title</title>
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+</head>
+- title of page and flavicon
+
+
+make a table!
+ <table>
+  <tr>
+    <th>Company</th>
+    <th>Contact</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+  </tr>
+  add border ot table:
+</table> 
+table, th, td {
+  border: 1px solid black;
+}
+border-collapse: collapse; - make them be single line borders
+border-radius - make rounded corners
+remove table from style modifer if you want no outer border
+border-style - change style of border
+border-color - change color of border
+<table style="width:100%"> - width and height modifiers can be used to change certain thingies
+<th colspan="2">Name</th> <th rowspan="2">Phone</th>- makes things span!
+padding and spacing can be used on tables
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 40px;
+
+tr:nth-child(even) {
+  background-color: #D6EEEE;
+}
+- change certiain things
+border-bottom: 1px solid #ddd; - adds borders to tables
+tr:hover {background-color: #D6EEEE;} - mouse highlight
+colgroup>
+    <col span="2" style="background-color: #D6EEEE">
+  </colgroup> - styles specific collumns,  i'm assumin you can do the same for rows.
+  empty col group to get a further one
+  hide collums with visibility:collapse
+  <ul> - unordered list
+  <ol> - ordered list
+  <li> - list item
+  description lists:
+   <dl>
+  <dt>Coffee</dt>
+  <dd>- black hot drink</dd>
+  <dt>Milk</dt>
+  <dd>- white cold drink</dd>
+</dl> 
+list-style-type:disc; - changes style of list, none for none
+
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111111;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+
+make a list to make a navigation bar
+
+<div> - division in HTML
+
+there are block and inline elements that do or don't divide the screen and use up all the space
+
+ <div style="background-color:black;color:white;padding:20px;">
+  <h2>London</h2>
+  <p>London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+</div> 
+make a divided part of the site
+<span> markup only a part of the text
+div {}
+  width:300px;
+  margin:auto;
+can divvy things up!
+class: = define the class of something
+<style>
+div.mycontainer {
+  width:100%;
+  overflow:auto;
+}
+div.mycontainer div {
+  width:33%;  
+  float:left;
+}
+</style>
+can be used to define the style for just a class and this is how to make elements float next to eachother
+ <style>
+div {
+  width: 30%;
+  display: inline-block;
+}
+</style> 
+you can also just make them display next to eachother like this
+OR you can contain your divs in a div and then in the style, use flex
+ <style>
+.mycontainer {
+  display: flex;
+}
+.mycontainer > div {
+  width:33%;
+}
+</style> 
+OR you can use a grid
+ <style>
+.grid-container {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+}
+</style> 
