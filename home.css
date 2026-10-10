@@ -8,10 +8,14 @@ body {
 h1 {
     text-align:center;
     font-family:sans-serif;
+    margin-right:5%;
+    margin-left:5%;
 }
 h2 {
     text-align:center;
     font-family:sans-serif;
+    margin-right:5%;
+    margin-left:5%;
 }
 div.pagetitle {
     width: 50%;
@@ -82,7 +86,22 @@ img {
 dt {
     margin:auto;
     font-size:150%;
+    margin-right:5%;
+    margin-left:5%;
+}
+dd {
+    text-align:center;
+    margin-right:5%;
+    margin-left:5%;
 }
 audio {
     vertical-align:middle;
+}
+p {
+    margin-right:5%;
+    margin-left:5%;
+}
+span {
+    margin-right:5%;
+    margin-left:5%;
 }
